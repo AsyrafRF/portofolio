@@ -5,7 +5,7 @@ import { profile } from "@/data/profile";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center text-center px-6">
+    <section id="home" className="min-h-screen flex items-center justify-center text-center px-6">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
