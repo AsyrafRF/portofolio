@@ -11,7 +11,7 @@ export default function Contact() {
             Let’s build something great together
           </h3>
 
-          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+          <p className="text-gray-300 dark:text-gray-400 leading-relaxed">
             Tertarik bekerja sama, diskusi project, atau sekadar ngobrol
             seputar teknologi? Jangan ragu untuk menghubungi saya.
           </p>

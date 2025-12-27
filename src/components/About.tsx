@@ -4,7 +4,7 @@ import { profile } from "@/data/profile";
 export default function About() {
   return (
     <Section id="about" title="About Me">
-      <p className="text-gray-300 leading-relaxed max-w-3xl">
+      <p className="text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl">
         {profile.bio}
       </p>
 
