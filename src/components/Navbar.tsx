@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -39,16 +40,18 @@ export default function Navbar() {
         </Link>
 
         {/* Menu */}
-        <div className="flex gap-8 text-sm">
+        <div className="flex items-center gap-6 text-sm">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-gray-300 hover:text-white transition"
+              className="text-gray-300 hover:text-white dark:text-gray-300 transition"
             >
               {item.label}
             </a>
           ))}
+
+          <ThemeToggle />
         </div>
       </nav>
     </header>

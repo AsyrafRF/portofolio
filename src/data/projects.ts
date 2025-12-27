@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "Smart Inventory System",
     description: "Web-based inventory management system",
-    image: "https://via.placeholder.com/600x400",
+    image: "https://d2slcw3kip6qmk.cloudfront.net/marketing/blog/2017Q2/project-planning-header@2x.png",
     tech: ["Next.js", "Supabase", "Tailwind"],
     github: "https://github.com/asyraf/inventory",
     demo: "https://example.com/inventory",
@@ -10,7 +10,7 @@ export const projects = [
   {
     title: "Mobile POS App",
     description: "Point of Sales Android Application",
-    image: "https://via.placeholder.com/600x400",
+    image: "https://www.slashgear.com/img/gallery/5-unusual-raspberry-pi-projects-found-in-the-wild/l-intro-1683510614.jpg",
     tech: ["Flutter", "Firebase"],
     github: "",
     demo: "https://example.com/pos",

@@ -6,7 +6,12 @@ export default function ProjectCard({ project }: any) {
   return (
     <motion.div
       whileHover={{ y: -6 }}
-      className="bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
+      className="
+      bg-gray-100 dark:bg-gray-900
+      text-black dark:text-white
+      rounded-xl overflow-hidden 
+      border border-gray-200 dark:border-gray-800
+      "
     >
       <img
         src={project.image}
@@ -16,7 +21,7 @@ export default function ProjectCard({ project }: any) {
 
       <div className="p-5">
         <h3 className="text-xl font-semibold">{project.title}</h3>
-        <p className="mt-2 text-gray-400 text-sm">
+        <p className="mt-2 text-gray-800 dark:text-gray-400 text-sm">
           {project.description}
         </p>
 
@@ -24,7 +29,12 @@ export default function ProjectCard({ project }: any) {
           {project.tech.map((t: string) => (
             <span
               key={t}
-              className="text-xs px-3 py-1 bg-black border border-gray-700 rounded-full"
+              className="
+              text-xs px-3 py-1
+              text-black dark:text-white
+              bg-white dark:bg-black 
+              border border-gray-700 
+              rounded-full"
             >
               {t}
             </span>
