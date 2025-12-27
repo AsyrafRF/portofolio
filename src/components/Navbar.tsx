@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import ThemeToggle from "./ThemeToggle";
+import DarkModeToggle from "./DarkModeToggle";
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -12,26 +12,11 @@ const navItems = [
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all ${
-        scrolled
-          ? "backdrop-blur bg-black/70 border-b border-gray-800"
-          : "bg-transparent"
-      }`}
-    >
-      <nav className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+    <nav className="fixed w-full bg-white dark:bg-gray-900 shadow z-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         {/* Logo */}
         <Link
           href="#home"
@@ -40,21 +25,75 @@ export default function Navbar() {
           Asyraf<span className="text-gray-400">.RF</span>
         </Link>
 
-        {/* Menu */}
-        <div className="flex items-center gap-6 text-sm">
+        {/* Desktop menu */}
+        <div className="hidden md:flex space-x-6 items-center">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-gray-300 hover:text-white dark:text-gray-300 transition"
+              className="hover:text-blue-500 transition"
             >
               {item.label}
             </a>
           ))}
-
-          <ThemeToggle />
+          <DarkModeToggle />
         </div>
-      </nav>
-    </header>
+
+        {/* Mobile Hamburger */}
+        <div className="md:hidden flex items-center">
+          <DarkModeToggle />
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="ml-2 text-gray-800 dark:text-gray-200 focus:outline-none"
+          >
+            {isOpen ? (
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      {isOpen && (
+        <div className="md:hidden bg-white dark:bg-gray-900 px-4 pt-2 pb-4 space-y-2">
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="block hover:text-blue-500 transition"
+              onClick={() => setIsOpen(false)}
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+      )}
+    </nav>
   );
 }
