@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Green Profile</title>
+
+    <style>
+        :root {
+            --neon: #00ff9c;
+            --dark: #050505;
+            --card: #0b0f0d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: var(--dark);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* ===== Neon Glow ===== */
+        .glow {
+            text-shadow: 0 0 10px var(--neon),
+                         0 0 20px var(--neon);
+        }
+
+        /* ===== Navbar ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(10px);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: var(--neon);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            text-shadow: 0 0 10px var(--neon);
+        }
+
+        /* ===== Hero ===== */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+        }
+
+        .hero p {
+            color: #aaa;
+            margin-top: 15px;
+            max-width: 600px;
+        }
+
+        .btn {
+            margin-top: 30px;
+            padding: 12px 30px;
+            border: 2px solid var(--neon);
+            background: transparent;
+            color: var(--neon);
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: var(--neon);
+            color: black;
+            box-shadow: 0 0 20px var(--neon);
+        }
+
+        section {
+            padding: 100px 10%;
+        }
+
+        /* ===== About ===== */
+        .card {
+            background: var(--card);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,255,156,0.1);
+        }
+
+        /* ===== Skills ===== */
+        .skill {
+            margin: 15px 0;
+        }
+
+        .bar {
+            background: #111;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .bar span {
+            display: block;
+            height: 12px;
+            background: var(--neon);
+            box-shadow: 0 0 10px var(--neon);
+            width: 0;
+            transition: 1.5s;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #000;
+            color: #666;
+        }
+
+        /* ===== Animasi Scroll ===== */
+        .fade {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 1s;
+        }
+
+        .fade.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <h3 class="glow">NEON PROFILE</h3>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1 class="glow">Hi, I'm <span style="color: var(--neon)">Your Name</span></h1>
+    <p>Web Developer | UI Designer | Tech Enthusiast</p>
+    <button class="btn">Explore More</button>
+</section>
+
+<section id="about" class="fade">
+    <h2 class="glow">About Me</h2>
+    <div class="card">
+        <p>
+            Saya adalah web developer yang fokus pada desain modern,
+            futuristik, dan performa tinggi. Suka bereksperimen dengan
+            animasi, efek neon, dan UI interaktif.
+        </p>
+    </div>
+</section>
+
+<section id="skills" class="fade">
+    <h2 class="glow">Skills</h2>
+
+    <div class="skill">
+        <p>HTML</p>
+        <div class="bar"><span data-width="95%"></span></div>
+    </div>
+
+    <div class="skill">
+        <p>CSS</p>
+        <div class="bar"><span data-width="90%"></span></div>
+    </div>
+
+    <div class="skill">
+        <p>JavaScript</p>
+        <div class="bar"><span data-width="85%"></span></div>
+    </div>
+</section>
+
+<section id="contact" class="fade">
+    <h2 class="glow">Contact</h2>
+    <div class="card">
+        <p>Email: your@email.com</p>
+        <p>Instagram: @yourname</p>
+        <p>GitHub: github.com/yourname</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 | Neon Green Profile
+</footer>
+
+<script>
+    // Scroll Animation
+    const fades = document.querySelectorAll('.fade');
+
+    window.addEventListener('scroll', () => {
+        fades.forEach(fade => {
+            const pos = fade.getBoundingClientRect().top;
+            if (pos < window.innerHeight - 100) {
+                fade.classList.add('show');
+            }
+        });
+    });
+
+    // Skill Bar Animation
+    const bars = document.querySelectorAll('.bar span');
+
+    bars.forEach(bar => {
+        setTimeout(() => {
+            bar.style.width = bar.dataset.width;
+        }, 500);
+    });
+</script>
+
+</body>
+</html>
