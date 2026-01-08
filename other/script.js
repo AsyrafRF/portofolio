@@ -13,7 +13,7 @@ gsap.from(".subtitle", {
 });
 
 gsap.from(".neon-btn", {
-    opacity: 0,
+    opacity: 1,
     scale: 0.8,
     delay: 1
 });
