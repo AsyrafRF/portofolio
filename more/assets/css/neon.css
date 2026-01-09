@@ -1,0 +1,506 @@
+/* ======================================================
+   NEON.CSS — CYBERPUNK / FUTURISTIC THEME
+   Brand: ASYRAF.RF
+   ====================================================== */
+
+/* ========== NEON OVERRIDES ========== */
+body {
+  text-shadow: 0 0 1px rgba(0,255,156,0.25);
+}
+
+/* ========== GLOW TEXT ========== */
+.glow {
+  color: var(--accent);
+  text-shadow:
+    0 0 6px rgba(0,255,156,0.8),
+    0 0 14px rgba(0,255,156,0.6),
+    0 0 24px rgba(0,255,156,0.4);
+}
+
+/* ========== GLITCH TEXT ========== */
+.glitch {
+  position: relative;
+  color: var(--accent);
+  text-shadow:
+    0 0 8px rgba(0,255,156,0.7),
+    0 0 20px rgba(0,255,156,0.5);
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.glitch::before {
+  color: #6dffd3;
+  transform: translate(2px, -2px);
+  clip-path: inset(0 0 60% 0);
+  animation: glitchTop 2.5s infinite linear alternate;
+}
+
+.glitch::after {
+  color: #00c47c;
+  transform: translate(-2px, 2px);
+  clip-path: inset(40% 0 0 0);
+  animation: glitchBottom 3s infinite linear alternate;
+}
+
+@keyframes glitchTop {
+  0%   { clip-path: inset(0 0 60% 0); }
+  50%  { clip-path: inset(10% 0 40% 0); }
+  100% { clip-path: inset(20% 0 30% 0); }
+}
+
+@keyframes glitchBottom {
+  0%   { clip-path: inset(40% 0 0 0); }
+  50%  { clip-path: inset(60% 0 10% 0); }
+  100% { clip-path: inset(70% 0 0 0); }
+}
+
+/* ========== NEON BUTTON / CTA ========== */
+.cta a {
+  position: relative;
+  box-shadow:
+    inset 0 0 0 rgba(0,255,156,0),
+    0 0 12px rgba(0,255,156,0.3);
+}
+
+.cta a:hover {
+  box-shadow:
+    0 0 6px rgba(0,255,156,0.9),
+    0 0 20px rgba(0,255,156,0.8),
+    0 0 40px rgba(0,255,156,0.6);
+}
+
+/* ========== NEON CARD ========== */
+.card {
+  transition: 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow:
+    0 0 20px rgba(0,255,156,0.35),
+    0 0 40px rgba(0,255,156,0.15);
+}
+
+/* ========== SKILL NEON ========== */
+.skills-grid div {
+  border-left: 3px solid var(--accent);
+  padding-left: 12px;
+}
+
+/* ========== SOCIAL HOVER ========== */
+.socials a {
+  transition: 0.3s ease;
+}
+
+.socials a:hover {
+  background: var(--accent);
+  color: #000;
+  box-shadow:
+    0 0 12px rgba(0,255,156,0.7),
+    0 0 26px rgba(0,255,156,0.5);
+  text-decoration: none;
+}
+
+/* ========== SCANLINE OVERLAY ========== */
+.scanline {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,255,156,0.03),
+    rgba(0,255,156,0.03) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+  z-index: 999;
+}
+
+/* ========== NEON SEPARATOR ========== */
+section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 60%;
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0,255,156,0.5),
+    transparent
+  );
+}
+
+/* ========== SECRET MODE (KONAMI) ========== */
+body.secret-mode {
+  --accent: #ff003c;
+  background: #050001;
+}
+
+body.secret-mode .glitch,
+body.secret-mode .glow {
+  text-shadow:
+    0 0 10px rgba(255,0,60,0.9),
+    0 0 30px rgba(255,0,60,0.7),
+    0 0 60px rgba(255,0,60,0.5);
+}
+
+body.secret-mode .cta a,
+body.secret-mode .socials a {
+  border-color: #ff003c;
+}
+
+body.secret-mode .card:hover {
+  box-shadow:
+    0 0 20px rgba(255,0,60,0.4),
+    0 0 50px rgba(255,0,60,0.2);
+}
+
+/* ========== SOFT FLICKER ========== */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+.glow,
+.glitch {
+  animation: flicker 6s infinite;
+}
+
+
+/* ======================================================
+   SECRET SECTION STYLE
+   ====================================================== */
+
+.secret-section {
+  margin-top: 160px;
+  border-top: 1px dashed rgba(255,0,60,0.4);
+  padding-top: 120px;
+}
+
+.secret-section h2 {
+  text-align: center;
+  color: #ff003c;
+  margin-bottom: 60px;
+}
+
+/* Grid */
+.secret-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+/* Card */
+.secret-card {
+  background: rgba(20,0,5,0.7);
+  border: 1px solid rgba(255,0,60,0.4);
+  padding: 26px;
+  border-radius: 10px;
+  box-shadow:
+    0 0 25px rgba(255,0,60,0.15);
+  transition: 0.4s ease;
+}
+
+.secret-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 40px rgba(255,0,60,0.35);
+}
+
+.secret-card h3 {
+  color: #ff7a9c;
+  margin-bottom: 10px;
+}
+
+.secret-card p,
+.secret-card blockquote {
+  color: #ffd6e0;
+  font-size: 0.9rem;
+}
+
+.secret-card blockquote {
+  font-style: italic;
+  border-left: 3px solid #ff003c;
+  padding-left: 12px;
+}
+
+/* ======================================================
+   SECRET MINI GAME — SYSTEM BREACH
+   ====================================================== */
+
+.game-box {
+  max-width: 500px;
+  margin: 60px auto 0;
+  text-align: center;
+  padding: 30px;
+  border: 1px solid rgba(255,0,60,0.4);
+  background: rgba(10,0,4,0.75);
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(255,0,60,0.2);
+}
+
+.signal-bar {
+  width: 100%;
+  height: 16px;
+  background: #220008;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 30px 0;
+}
+
+.signal {
+  height: 100%;
+  width: 10%;
+  background: linear-gradient(
+    90deg,
+    #ff003c,
+    #ff7a9c
+  );
+  box-shadow: 0 0 20px #ff003c;
+}
+
+#hack-btn {
+  padding: 12px 36px;
+  border: 1px solid #ff003c;
+  background: transparent;
+  color: #ff7a9c;
+  cursor: pointer;
+  font-family: "Courier New", monospace;
+}
+
+#hack-btn:hover {
+  background: #ff003c;
+  color: #000;
+}
+
+.status {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: #ffd6e0;
+}
+
+/* ======================================================
+   BLOG SYSTEM
+   ====================================================== */
+
+.blog-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 24px;
+}
+
+.blog-card {
+  padding: 24px;
+  border: 1px solid rgba(0,255,156,0.3);
+  background: rgba(0,0,0,0.65);
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(0,255,156,0.3);
+}
+
+.blog-card h3 {
+  color: var(--accent);
+}
+
+.blog-card .meta {
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+/* Blog Reader */
+.blog-view {
+  margin-top: 60px;
+  padding: 40px;
+  background: rgba(0,0,0,0.7);
+  border: 1px solid rgba(0,255,156,0.4);
+}
+
+.blog-view h1,
+.blog-view h2 {
+  color: #6dffd3;
+}
+
+.blog-view p,
+.blog-view li,
+.blog-view blockquote {
+  color: #e0fff4;
+  line-height: 1.7;
+}
+
+.blog-view blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 14px;
+  opacity: 0.85;
+}
+
+#close-blog {
+  margin-bottom: 20px;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+/* ======================================================
+   BLOG TAG FILTER
+   ====================================================== */
+
+.blog-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.blog-tag {
+  padding: 6px 14px;
+  font-size: 0.7rem;
+  border: 1px solid rgba(0,255,156,0.4);
+  color: var(--accent);
+  cursor: pointer;
+  transition: 0.3s ease;
+  user-select: none;
+}
+
+.blog-tag:hover {
+  background: rgba(0,255,156,0.15);
+}
+
+.blog-tag.active {
+  background: var(--accent);
+  color: #000;
+  box-shadow: 0 0 14px rgba(0,255,156,0.7);
+}
+
+.logo {
+  height: 50px;       /* Tentukan tinggi yang konsisten */
+  width: auto;        /* Biarkan lebar menyesuaikan proporsinya */
+  display: block;     /* Menghilangkan whitespace di bawah gambar */
+  cursor: pointer;    /* Menunjukkan bahwa logo bisa diklik */
+  transition: transform 0.3s ease; /* Efek halus saat hover */
+  align-items: center;
+}
+
+.logo:hover {
+  transform: scale(1.05); /* Sedikit membesar saat kursor di atasnya */
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+  -webkit-background-clip: text; /* Memotong background ke bentuk teks */
+  /* Tambahkan ini untuk memperbaiki error */
+  background-clip: text; 
+  /* Tambahkan warna cadangan jika background-clip tidak didukung */
+  color: transparent;
+  -webkit-text-fill-color: transparent; /* Membuat warna asli teks transparan */
+}
+
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo {
+  border-radius: 20px;
+  border: 3px solid #ffffff; /* Garis tepi putih */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+}
+
+.explore-section {
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.explore-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  border: 1px solid rgba(0, 255, 156, 0.2);
+  background: rgba(0, 20, 15, 0.4);
+  border-radius: 20px;
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+/* Animasi Lingkaran Radar di Background */
+.radar-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 255, 156, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+  animation: radar Pulse 3s infinite;
+}
+
+@keyframes radarPulse {
+  0% { width: 100px; height: 100px; opacity: 0.8; }
+  100% { width: 500px; height: 500px; opacity: 0; }
+}
+
+.explore-title {
+  font-family: 'Courier New', monospace;
+  color: var(--accent);
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+/* Tombol Explore Modern */
+.btn-explore {
+  display: inline-block;
+  padding: 15px 40px;
+  margin-top: 25px;
+  color: #000;
+  background: var(--accent); /* Warna hijau neon kamu */
+  text-decoration: none;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  border-radius: 5px;
+  position: relative;
+  transition: all 0.3s;
+  box-shadow: 0 0 15px rgba(0, 255, 156, 0.5);
+}
+
+.btn-explore:hover {
+  background: transparent;
+  color: var(--accent);
+  box-shadow: 0 0 30px rgba(0, 255, 156, 0.8);
+  transform: scale(1.1);
+}
+
+.btn-explore::before {
+  content: '[';
+  margin-right: 10px;
+}
+
+.btn-explore::after {
+  content: ']';
+  margin-left: 10px;
+}

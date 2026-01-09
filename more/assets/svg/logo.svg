@@ -1,0 +1,7 @@
+<svg width="120" height="120" viewBox="0 0 120 120">
+  <circle cx="60" cy="60" r="55" stroke="#00ff9c" stroke-width="4" fill="none"/>
+  <text x="50%" y="55%" text-anchor="middle"
+        fill="#00ff9c" font-size="24" font-family="monospace">
+    ARF
+  </text>
+</svg>

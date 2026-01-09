@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ACCESS :: ASYRAF.RF</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="assets/css/core.css">
+<link rel="stylesheet" href="assets/css/matrix.css">
+</head>
+<body class="crt noise boot-flicker">
+
+<canvas id="matrix"></canvas>
+
+<div class="matrix-overlay"></div>
+<div class="loading-bar"></div>
+
+<div class="login-box">
+  <svg class="logo"><use href="assets/svg/logo.svg"/></svg>
+  <h1>ASYRAF.RF</h1>
+  <h3>ENTER THE SYSTEM</h3>
+  <input type="password" id="pass" placeholder="ACCESS KEY">
+  <button onclick="login()">LOGIN</button>
+</div>
+
+<script src="assets/js/matrix.js"></script>
+<script>
+function login(){
+  document.body.classList.add("glitch-out");
+  setTimeout(()=>location.href="main.html",1200);
+}
+</script>
+</body>
+</html>
