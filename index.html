@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AsyrafRF's Profile.">
+    <title>Asyraf.RF</title>
+    <link rel="icon" type="image/png" href="img\A-icon.png">
+
+    <style>
+        :root {
+            --neon: #00ff9c;
+            --dark: #050505;
+            --card: #0b0f0d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: var(--dark);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* ===== Neon Glow ===== */
+        .glow {
+            text-shadow: 0 0 10px var(--neon),
+                         0 0 20px var(--neon);
+        }
+
+        /* ===== Navbar ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(10px);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: var(--neon);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            text-shadow: 0 0 10px var(--neon);
+        }
+
+        /* ===== Hero ===== */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+        }
+
+        .hero p {
+            color: #aaa;
+            margin-top: 15px;
+            max-width: 600px;
+        }
+
+        .btn {
+            margin-top: 30px;
+            padding: 12px 30px;
+            border: 2px solid var(--neon);
+            background: transparent;
+            color: var(--neon);
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: var(--neon);
+            color: black;
+            box-shadow: 0 0 20px var(--neon);
+        }
+
+        section {
+            padding: 100px 10%;
+        }
+
+        /* ===== About ===== */
+        .card {
+            background: var(--card);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,255,156,0.1);
+        }
+
+        .card a {
+            color: var(--neon); /* Warna biru modern */
+            text-decoration: none; /* Menghilangkan garis bawah */
+            transition: 0.3s;
+        }
+
+        .card a:hover {
+            color: var(--neon); 
+            text-decoration: none; 
+            /* Parameter: horizontal, vertical, blur-radius, warna */
+            text-shadow: 0 0 8px rgba(0, 255, 157, 0.8), 
+                        0 0 12px rgba(0, 255, 149, 0.5);
+            transition: 0.3s ease-in-out;
+        }
+
+        .card strong {
+            color: #00ffaa; /* Or your preferred neon color */
+            text-shadow: 0 0 5px rgba(0, 255, 149, 0.5);
+        }
+
+        /* ===== Skills ===== */
+        .skill {
+            margin: 15px 0;
+        }
+
+        .bar {
+            background: #111;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .bar span {
+            display: block;
+            height: 12px;
+            background: var(--neon);
+            box-shadow: 0 0 10px var(--neon);
+            width: 0;
+            transition: 1.5s;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #000;
+            color: #666;
+        }
+
+        /* ===== Animasi Scroll ===== */
+        .fade {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 1s;
+        }
+
+        .fade.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <h3 class="glow">Asyraf.RF</h3>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="other\index.html">Other</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1 class="glow">Hi, I'm <span style="color: var(--neon)">Asyraf Rais Fadhil</span></h1>
+    <p>Web Developer | UI Designer | Tech Enthusiast</p>
+    <a href="more\index.html">
+        <button class="btn">Explore More</button>
+    </a>
+</section>
+
+<section id="about" class="fade">
+    <h2 class="glow">About Me</h2>
+    <div class="card">
+        <p>
+            <strong>Web Developer</strong> with a passion for building high-performance, modern, and futuristic digital experiences. I don't just build websites; I create immersive environments by experimenting with <strong>dynamic animations, neon aesthetics, and highly interactive UIs</strong>.
+        </p>
+        <p>
+            Currently pursuing my Bachelor’s degree in <strong>Software Engineering (D4 TRPL)</strong> at <strong>Politeknik Negeri Batam (2024-2028)</strong>, I spend my time at the intersection of logic and art. My technical curiosity drives me to dive deep into <strong>Full-Stack Development</strong> using the latest tech stacks and exploring the world of <strong>Game Development</strong>.
+        </p>
+        <p>
+            Outside of the terminal, I am a creator at heart. Whether it’s illustrating <strong>Digital Art</strong> or weaving narratives through <strong>Storywriting</strong>, I bring a storyteller’s perspective to every line of code I write.
+        </p>
+    </div>
+</section>
+
+<section id="skills" class="fade">
+    <h2 class="glow">Skills</h2>
+
+    <div class="skill">
+        <p>HTML</p>
+        <div class="bar"><span data-width="95%"></span></div>
+    </div>
+
+    <div class="skill">
+        <p>CSS</p>
+        <div class="bar"><span data-width="90%"></span></div>
+    </div>
+
+    <div class="skill">
+        <p>JavaScript</p>
+        <div class="bar"><span data-width="85%"></span></div>
+    </div>
+</section>
+
+<section id="contact" class="fade">
+    <h2 class="glow">Contact</h2>
+    <div class="card">
+        <p>Email: <a href="mailto:asrafrf@gmail.com">asrafrf@gmail.com</a></p>
+        <p>Instagram: <a href="https://instagram.com/asyrfrf" target="_blank">@asyrfrf</a></p>
+        <p>GitHub: <a href="https://github.com/AsyrafRF" target="_blank">github.com/AsyrafRF</a></p>
+    </div>
+</section>
+
+<footer>
+    © 2026 | Asyraf.RF
+</footer>
+
+<script>
+    // Scroll Animation
+    const fades = document.querySelectorAll('.fade');
+
+    window.addEventListener('scroll', () => {
+        fades.forEach(fade => {
+            const pos = fade.getBoundingClientRect().top;
+            if (pos < window.innerHeight - 100) {
+                fade.classList.add('show');
+            }
+        });
+    });
+
+    // Skill Bar Animation
+    const bars = document.querySelectorAll('.bar span');
+
+    bars.forEach(bar => {
+        setTimeout(() => {
+            bar.style.width = bar.dataset.width;
+        }, 500);
+    });
+</script>
+
+</body>
+</html>

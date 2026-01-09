@@ -1,0 +1,135 @@
+:root {
+    --neon: #00ff9c;
+    --bg: #020403;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+body {
+    background: var(--bg);
+    color: var(--neon);
+    overflow-x: hidden;
+}
+
+/* Background Canvas */
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Scanline */
+.scanline {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(0,255,156,0.03),
+        rgba(0,255,156,0.03) 1px,
+        transparent 2px,
+        transparent 4px
+    );
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* Header */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Glitch Text */
+.glitch {
+    font-size: 4rem;
+    position: relative;
+    text-shadow: 0 0 20px var(--neon);
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.glitch::before {
+    color: #00ffaa;
+    animation: glitch 2s infinite;
+}
+
+.glitch::after {
+    color: #00cc88;
+    animation: glitch 1.5s infinite reverse;
+}
+
+@keyframes glitch {
+    0% { clip-path: inset(0 0 80% 0); }
+    50% { clip-path: inset(40% 0 20% 0); }
+    100% { clip-path: inset(80% 0 0 0); }
+}
+
+.subtitle {
+    margin-top: 15px;
+    color: #aaa;
+}
+
+/* Neon Button */
+.neon-btn {
+    margin-top: 40px;
+    padding: 15px 40px;
+    background: transparent;
+    border: 2px solid var(--neon);
+    color: var(--neon);
+    cursor: pointer;
+    box-shadow: 0 0 20px var(--neon);
+    transition: 0.3s;
+}
+
+.neon-btn:hover {
+    background: var(--neon);
+    color: black;
+}
+
+/* Sections */
+section {
+    padding: 100px 15%;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Skills */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+.skill {
+    border: 1px solid var(--neon);
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,255,156,0.4);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.8rem;
+    color: #555;
+}

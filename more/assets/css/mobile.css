@@ -1,0 +1,202 @@
+/* ======================================================
+   MOBILE.CSS — PERFORMANCE & RESPONSIVE OVERRIDES
+   Target: Mobile & Low-End Devices
+   ====================================================== */
+
+/* ========== BREAKPOINT ========== */
+@media (max-width: 768px) {
+
+  /* ===== Root Tweaks ===== */
+  :root {
+    --section-gap: 72px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  /* ===== Disable Heavy FX ===== */
+  .crt::before,
+  .crt::after,
+  .noise::after,
+  .scanline,
+  .matrix-overlay {
+    display: none !important;
+  }
+
+  /* ===== Reduce Neon Load ===== */
+  .glitch::before,
+  .glitch::after {
+    display: none;
+  }
+
+  .glow,
+  .glitch {
+    text-shadow:
+      0 0 6px rgba(0,255,156,0.6);
+  }
+
+  /* ===== Hero ===== */
+  #hero {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  #hero h1 {
+    font-size: 2.2rem;
+  }
+
+  #hero .intro {
+    font-size: 0.95rem;
+  }
+
+  /* ===== CTA ===== */
+  .cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta a {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+  }
+
+  /* ===== Sections ===== */
+  section {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  /* ===== Cards ===== */
+  .cards,
+  .projects,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  /* ===== Timeline ===== */
+  .timeline {
+    padding-left: 12px;
+  }
+
+  .timeline::before {
+    left: 2px;
+  }
+
+  .timeline li {
+    padding-left: 20px;
+  }
+
+  /* ===== Social Buttons ===== */
+  .socials a {
+    flex: 1 1 48%;
+    text-align: center;
+    padding: 12px;
+  }
+
+  /* ===== Footer ===== */
+  footer {
+    font-size: 0.7rem;
+  }
+}
+
+/* ======================================================
+   EXTRA LOW-END SAFETY MODE
+   Activated by JS: body.low-power
+   ====================================================== */
+
+body.low-power {
+
+  /* Kill all animation */
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Flat colors only */
+  .glow,
+  .glitch {
+    text-shadow: none !important;
+  }
+
+  /* Reduce borders & shadows */
+  .card,
+  .cta a,
+  .socials a {
+    box-shadow: none !important;
+  }
+}
+
+/* ======================================================
+   TOUCH OPTIMIZATION
+   ====================================================== */
+
+@media (hover: none) {
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+}
+
+/* ======================================================
+   SMALL SCREENS (VERY SMALL PHONES)
+   ====================================================== */
+
+@media (max-width: 360px) {
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .secret-section {
+    padding-top: 80px;
+  }
+
+  .secret-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .game-box {
+    padding: 20px;
+  }
+
+  #hack-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-view {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-tags {
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+}
