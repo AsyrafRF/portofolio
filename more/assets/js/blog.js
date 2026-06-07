@@ -92,3 +92,4 @@ function loadPost(id) {
 }
 
 closeBtn.onclick = () => blogView.classList.add("hidden");
+

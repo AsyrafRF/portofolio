@@ -3,9 +3,9 @@
    ====================================================== */
 
 const konamiCode = [
-  "ArrowUp","ArrowUp","ArrowDown","ArrowDown",
-  "ArrowLeft","ArrowRight","ArrowLeft","ArrowRight",
-  "b","a"
+  "ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown",
+  "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight",
+  "b", "a"
 ];
 
 let konamiIndex = 0;
@@ -43,3 +43,4 @@ function activateSecretMode() {
     • Alternate mindset
   `);
 }
+

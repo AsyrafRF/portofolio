@@ -3,23 +3,25 @@
    ====================================================== */
 
 .terminal {
-  background: rgba(0,0,0,0.7);
-  border: 1px solid rgba(0,255,156,0.4);
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 255, 156, 0.4);
   padding: 20px;
   font-family: "Courier New", monospace;
   font-size: 0.85rem;
   color: var(--accent);
   max-width: 800px;
   margin: 0 auto;
-  box-shadow: 0 0 30px rgba(0,255,156,0.2);
+  box-shadow: 0 0 30px rgba(0, 255, 156, 0.2);
 }
 
 .terminal {
-  background: rgba(0,0,0,0.7);
-  border: 1px solid rgba(0,255,156,0.4);
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 255, 156, 0.4);
   padding: 20px;
-  border-radius: 15px; /* <--- Membuat sudut melengkung */
-  overflow: hidden;    /* <--- Memastikan isi tetap di dalam border */
+  border-radius: 15px;
+  /* <--- Membuat sudut melengkung */
+  overflow: hidden;
+  /* <--- Memastikan isi tetap di dalam border */
   font-family: "Courier New", monospace;
   /* ... properti lainnya ... */
 }
@@ -39,5 +41,7 @@
 }
 
 @keyframes cursorBlink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }

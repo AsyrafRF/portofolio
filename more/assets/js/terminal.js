@@ -8,7 +8,7 @@ const terminalStrings = [
 let lineIndex = 0;
 let charIndex = 0;
 // Targetkan span di dalam terminal agar cursor tetap di tempatnya
-const output = document.getElementById("terminal-text"); 
+const output = document.getElementById("terminal-text");
 
 function type() {
   if (lineIndex < terminalStrings.length) {
@@ -27,3 +27,4 @@ function type() {
 
 // Jalankan fungsi
 type();
+

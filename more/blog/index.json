@@ -3,14 +3,20 @@
     "id": "first-post",
     "title": "Hello, System",
     "date": "2025-01-01",
-    "tags": ["Personal", "Mindset"],
+    "tags": [
+      "Personal",
+      "Mindset"
+    ],
     "excerpt": "How I see technology, systems, and creativity as one."
   },
   {
     "id": "cyberpunk-mindset",
     "title": "Cyberpunk Mindset for Engineers",
     "date": "2025-01-05",
-    "tags": ["Engineering", "Cyberpunk"],
+    "tags": [
+      "Engineering",
+      "Cyberpunk"
+    ],
     "excerpt": "Building systems is not just about code — it’s about control and vision."
   }
 ]

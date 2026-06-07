@@ -29,13 +29,11 @@ body {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: repeating-linear-gradient(
-        to bottom,
-        rgba(0,255,156,0.03),
-        rgba(0,255,156,0.03) 1px,
-        transparent 2px,
-        transparent 4px
-    );
+    background: repeating-linear-gradient(to bottom,
+            rgba(0, 255, 156, 0.03),
+            rgba(0, 255, 156, 0.03) 1px,
+            transparent 2px,
+            transparent 4px);
     pointer-events: none;
     z-index: 5;
 }
@@ -76,9 +74,17 @@ header {
 }
 
 @keyframes glitch {
-    0% { clip-path: inset(0 0 80% 0); }
-    50% { clip-path: inset(40% 0 20% 0); }
-    100% { clip-path: inset(80% 0 0 0); }
+    0% {
+        clip-path: inset(0 0 80% 0);
+    }
+
+    50% {
+        clip-path: inset(40% 0 20% 0);
+    }
+
+    100% {
+        clip-path: inset(80% 0 0 0);
+    }
 }
 
 .subtitle {
@@ -123,7 +129,7 @@ h2 {
     border: 1px solid var(--neon);
     padding: 15px;
     text-align: center;
-    box-shadow: 0 0 15px rgba(0,255,156,0.4);
+    box-shadow: 0 0 15px rgba(0, 255, 156, 0.4);
 }
 
 /* Footer */

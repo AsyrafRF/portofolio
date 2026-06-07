@@ -52,3 +52,4 @@ document.addEventListener("secretMode", () => {
   const game = document.getElementById("mini-game");
   game.classList.remove("hidden");
 });
+

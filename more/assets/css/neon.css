@@ -5,16 +5,16 @@
 
 /* ========== NEON OVERRIDES ========== */
 body {
-  text-shadow: 0 0 1px rgba(0,255,156,0.25);
+  text-shadow: 0 0 1px rgba(0, 255, 156, 0.25);
 }
 
 /* ========== GLOW TEXT ========== */
 .glow {
   color: var(--accent);
   text-shadow:
-    0 0 6px rgba(0,255,156,0.8),
-    0 0 14px rgba(0,255,156,0.6),
-    0 0 24px rgba(0,255,156,0.4);
+    0 0 6px rgba(0, 255, 156, 0.8),
+    0 0 14px rgba(0, 255, 156, 0.6),
+    0 0 24px rgba(0, 255, 156, 0.4);
 }
 
 /* ========== GLITCH TEXT ========== */
@@ -22,8 +22,8 @@ body {
   position: relative;
   color: var(--accent);
   text-shadow:
-    0 0 8px rgba(0,255,156,0.7),
-    0 0 20px rgba(0,255,156,0.5);
+    0 0 8px rgba(0, 255, 156, 0.7),
+    0 0 20px rgba(0, 255, 156, 0.5);
 }
 
 .glitch::before,
@@ -49,30 +49,46 @@ body {
 }
 
 @keyframes glitchTop {
-  0%   { clip-path: inset(0 0 60% 0); }
-  50%  { clip-path: inset(10% 0 40% 0); }
-  100% { clip-path: inset(20% 0 30% 0); }
+  0% {
+    clip-path: inset(0 0 60% 0);
+  }
+
+  50% {
+    clip-path: inset(10% 0 40% 0);
+  }
+
+  100% {
+    clip-path: inset(20% 0 30% 0);
+  }
 }
 
 @keyframes glitchBottom {
-  0%   { clip-path: inset(40% 0 0 0); }
-  50%  { clip-path: inset(60% 0 10% 0); }
-  100% { clip-path: inset(70% 0 0 0); }
+  0% {
+    clip-path: inset(40% 0 0 0);
+  }
+
+  50% {
+    clip-path: inset(60% 0 10% 0);
+  }
+
+  100% {
+    clip-path: inset(70% 0 0 0);
+  }
 }
 
 /* ========== NEON BUTTON / CTA ========== */
 .cta a {
   position: relative;
   box-shadow:
-    inset 0 0 0 rgba(0,255,156,0),
-    0 0 12px rgba(0,255,156,0.3);
+    inset 0 0 0 rgba(0, 255, 156, 0),
+    0 0 12px rgba(0, 255, 156, 0.3);
 }
 
 .cta a:hover {
   box-shadow:
-    0 0 6px rgba(0,255,156,0.9),
-    0 0 20px rgba(0,255,156,0.8),
-    0 0 40px rgba(0,255,156,0.6);
+    0 0 6px rgba(0, 255, 156, 0.9),
+    0 0 20px rgba(0, 255, 156, 0.8),
+    0 0 40px rgba(0, 255, 156, 0.6);
 }
 
 /* ========== NEON CARD ========== */
@@ -83,8 +99,8 @@ body {
 .card:hover {
   transform: translateY(-6px) scale(1.02);
   box-shadow:
-    0 0 20px rgba(0,255,156,0.35),
-    0 0 40px rgba(0,255,156,0.15);
+    0 0 20px rgba(0, 255, 156, 0.35),
+    0 0 40px rgba(0, 255, 156, 0.15);
 }
 
 /* ========== SKILL NEON ========== */
@@ -102,8 +118,8 @@ body {
   background: var(--accent);
   color: #000;
   box-shadow:
-    0 0 12px rgba(0,255,156,0.7),
-    0 0 26px rgba(0,255,156,0.5);
+    0 0 12px rgba(0, 255, 156, 0.7),
+    0 0 26px rgba(0, 255, 156, 0.5);
   text-decoration: none;
 }
 
@@ -112,13 +128,11 @@ body {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(0,255,156,0.03),
-    rgba(0,255,156,0.03) 1px,
-    transparent 2px,
-    transparent 4px
-  );
+  background: repeating-linear-gradient(to bottom,
+      rgba(0, 255, 156, 0.03),
+      rgba(0, 255, 156, 0.03) 1px,
+      transparent 2px,
+      transparent 4px);
   z-index: 999;
 }
 
@@ -131,12 +145,10 @@ section::after {
   width: 60%;
   height: 1px;
   transform: translateX(-50%);
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(0,255,156,0.5),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(0, 255, 156, 0.5),
+      transparent);
 }
 
 /* ========== SECRET MODE (KONAMI) ========== */
@@ -148,9 +160,9 @@ body.secret-mode {
 body.secret-mode .glitch,
 body.secret-mode .glow {
   text-shadow:
-    0 0 10px rgba(255,0,60,0.9),
-    0 0 30px rgba(255,0,60,0.7),
-    0 0 60px rgba(255,0,60,0.5);
+    0 0 10px rgba(255, 0, 60, 0.9),
+    0 0 30px rgba(255, 0, 60, 0.7),
+    0 0 60px rgba(255, 0, 60, 0.5);
 }
 
 body.secret-mode .cta a,
@@ -160,14 +172,21 @@ body.secret-mode .socials a {
 
 body.secret-mode .card:hover {
   box-shadow:
-    0 0 20px rgba(255,0,60,0.4),
-    0 0 50px rgba(255,0,60,0.2);
+    0 0 20px rgba(255, 0, 60, 0.4),
+    0 0 50px rgba(255, 0, 60, 0.2);
 }
 
 /* ========== SOFT FLICKER ========== */
 @keyframes flicker {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.85; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.85;
+  }
 }
 
 .glow,
@@ -182,7 +201,7 @@ body.secret-mode .card:hover {
 
 .secret-section {
   margin-top: 160px;
-  border-top: 1px dashed rgba(255,0,60,0.4);
+  border-top: 1px dashed rgba(255, 0, 60, 0.4);
   padding-top: 120px;
 }
 
@@ -201,19 +220,19 @@ body.secret-mode .card:hover {
 
 /* Card */
 .secret-card {
-  background: rgba(20,0,5,0.7);
-  border: 1px solid rgba(255,0,60,0.4);
+  background: rgba(20, 0, 5, 0.7);
+  border: 1px solid rgba(255, 0, 60, 0.4);
   padding: 26px;
   border-radius: 10px;
   box-shadow:
-    0 0 25px rgba(255,0,60,0.15);
+    0 0 25px rgba(255, 0, 60, 0.15);
   transition: 0.4s ease;
 }
 
 .secret-card:hover {
   transform: translateY(-6px);
   box-shadow:
-    0 0 40px rgba(255,0,60,0.35);
+    0 0 40px rgba(255, 0, 60, 0.35);
 }
 
 .secret-card h3 {
@@ -242,10 +261,10 @@ body.secret-mode .card:hover {
   margin: 60px auto 0;
   text-align: center;
   padding: 30px;
-  border: 1px solid rgba(255,0,60,0.4);
-  background: rgba(10,0,4,0.75);
+  border: 1px solid rgba(255, 0, 60, 0.4);
+  background: rgba(10, 0, 4, 0.75);
   border-radius: 12px;
-  box-shadow: 0 0 40px rgba(255,0,60,0.2);
+  box-shadow: 0 0 40px rgba(255, 0, 60, 0.2);
 }
 
 .signal-bar {
@@ -260,11 +279,9 @@ body.secret-mode .card:hover {
 .signal {
   height: 100%;
   width: 10%;
-  background: linear-gradient(
-    90deg,
-    #ff003c,
-    #ff7a9c
-  );
+  background: linear-gradient(90deg,
+      #ff003c,
+      #ff7a9c);
   box-shadow: 0 0 20px #ff003c;
 }
 
@@ -299,21 +316,21 @@ body.secret-mode .card:hover {
 
 .blog-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
 }
 
 .blog-card {
   padding: 24px;
-  border: 1px solid rgba(0,255,156,0.3);
-  background: rgba(0,0,0,0.65);
+  border: 1px solid rgba(0, 255, 156, 0.3);
+  background: rgba(0, 0, 0, 0.65);
   cursor: pointer;
   transition: 0.4s ease;
 }
 
 .blog-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 30px rgba(0,255,156,0.3);
+  box-shadow: 0 0 30px rgba(0, 255, 156, 0.3);
 }
 
 .blog-card h3 {
@@ -330,8 +347,8 @@ body.secret-mode .card:hover {
 .blog-view {
   margin-top: 60px;
   padding: 40px;
-  background: rgba(0,0,0,0.7);
-  border: 1px solid rgba(0,255,156,0.4);
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 255, 156, 0.4);
 }
 
 .blog-view h1,
@@ -375,7 +392,7 @@ body.secret-mode .card:hover {
 .blog-tag {
   padding: 6px 14px;
   font-size: 0.7rem;
-  border: 1px solid rgba(0,255,156,0.4);
+  border: 1px solid rgba(0, 255, 156, 0.4);
   color: var(--accent);
   cursor: pointer;
   transition: 0.3s ease;
@@ -383,38 +400,46 @@ body.secret-mode .card:hover {
 }
 
 .blog-tag:hover {
-  background: rgba(0,255,156,0.15);
+  background: rgba(0, 255, 156, 0.15);
 }
 
 .blog-tag.active {
   background: var(--accent);
   color: #000;
-  box-shadow: 0 0 14px rgba(0,255,156,0.7);
+  box-shadow: 0 0 14px rgba(0, 255, 156, 0.7);
 }
 
 .logo {
-  height: 50px;       /* Tentukan tinggi yang konsisten */
-  width: auto;        /* Biarkan lebar menyesuaikan proporsinya */
-  display: block;     /* Menghilangkan whitespace di bawah gambar */
-  cursor: pointer;    /* Menunjukkan bahwa logo bisa diklik */
-  transition: transform 0.3s ease; /* Efek halus saat hover */
+  height: 50px;
+  /* Tentukan tinggi yang konsisten */
+  width: auto;
+  /* Biarkan lebar menyesuaikan proporsinya */
+  display: block;
+  /* Menghilangkan whitespace di bawah gambar */
+  cursor: pointer;
+  /* Menunjukkan bahwa logo bisa diklik */
+  transition: transform 0.3s ease;
+  /* Efek halus saat hover */
   align-items: center;
 }
 
 .logo:hover {
-  transform: scale(1.05); /* Sedikit membesar saat kursor di atasnya */
+  transform: scale(1.05);
+  /* Sedikit membesar saat kursor di atasnya */
 }
 
 .logo {
   font-size: 2rem;
   font-weight: bold;
   background: linear-gradient(45deg, #6c5ce7, #a29bfe);
-  -webkit-background-clip: text; /* Memotong background ke bentuk teks */
+  -webkit-background-clip: text;
+  /* Memotong background ke bentuk teks */
   /* Tambahkan ini untuk memperbaiki error */
-  background-clip: text; 
+  background-clip: text;
   /* Tambahkan warna cadangan jika background-clip tidak didukung */
   color: transparent;
-  -webkit-text-fill-color: transparent; /* Membuat warna asli teks transparan */
+  -webkit-text-fill-color: transparent;
+  /* Membuat warna asli teks transparan */
 }
 
 .logo {
@@ -424,8 +449,10 @@ body.secret-mode .card:hover {
 
 .logo {
   border-radius: 20px;
-  border: 3px solid #ffffff; /* Garis tepi putih */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+  border: 3px solid #ffffff;
+  /* Garis tepi putih */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  /* Efek bayangan */
 }
 
 .explore-section {
@@ -461,8 +488,17 @@ body.secret-mode .card:hover {
 }
 
 @keyframes radarPulse {
-  0% { width: 100px; height: 100px; opacity: 0.8; }
-  100% { width: 500px; height: 500px; opacity: 0; }
+  0% {
+    width: 100px;
+    height: 100px;
+    opacity: 0.8;
+  }
+
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
 }
 
 .explore-title {
@@ -478,7 +514,8 @@ body.secret-mode .card:hover {
   padding: 15px 40px;
   margin-top: 25px;
   color: #000;
-  background: var(--accent); /* Warna hijau neon kamu */
+  background: var(--accent);
+  /* Warna hijau neon kamu */
   text-decoration: none;
   font-family: 'Courier New', monospace;
   font-weight: bold;

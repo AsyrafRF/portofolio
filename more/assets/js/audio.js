@@ -7,7 +7,7 @@ bgm.loop = true;
 bgm.volume = 0.35;
 
 function startAudio() {
-  bgm.play().catch(() => {});
+  bgm.play().catch(() => { });
 }
 
 document.addEventListener("click", startAudio, { once: true });
@@ -17,3 +17,4 @@ document.addEventListener("keydown", startAudio, { once: true });
 document.addEventListener("secretMode", () => {
   bgm.volume = 0.55;
 });
+

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +31,7 @@
         /* ===== Neon Glow ===== */
         .glow {
             text-shadow: 0 0 10px var(--neon),
-                         0 0 20px var(--neon);
+                0 0 20px var(--neon);
         }
 
         /* ===== Navbar ===== */
@@ -38,7 +39,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0,0,0,0.7);
+            background: rgba(0, 0, 0, 0.7);
             backdrop-filter: blur(10px);
             padding: 15px 50px;
             display: flex;
@@ -104,26 +105,29 @@
             background: var(--card);
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,255,156,0.1);
+            box-shadow: 0 0 15px rgba(0, 255, 156, 0.1);
         }
 
         .card a {
-            color: var(--neon); /* Warna biru modern */
-            text-decoration: none; /* Menghilangkan garis bawah */
+            color: var(--neon);
+            /* Warna biru modern */
+            text-decoration: none;
+            /* Menghilangkan garis bawah */
             transition: 0.3s;
         }
 
         .card a:hover {
-            color: var(--neon); 
-            text-decoration: none; 
+            color: var(--neon);
+            text-decoration: none;
             /* Parameter: horizontal, vertical, blur-radius, warna */
-            text-shadow: 0 0 8px rgba(0, 255, 157, 0.8), 
-                        0 0 12px rgba(0, 255, 149, 0.5);
+            text-shadow: 0 0 8px rgba(0, 255, 157, 0.8),
+                0 0 12px rgba(0, 255, 149, 0.5);
             transition: 0.3s ease-in-out;
         }
 
         .card strong {
-            color: #00ffaa; /* Or your preferred neon color */
+            color: #00ffaa;
+            /* Or your preferred neon color */
             text-shadow: 0 0 5px rgba(0, 255, 149, 0.5);
         }
 
@@ -174,95 +178,104 @@
         }
     </style>
 </head>
+
 <body>
 
-<nav>
-    <h3 class="glow">Asyraf.RF</h3>
-    <div>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-        <a href="other\index.html">Other</a>
-    </div>
-</nav>
+    <nav>
+        <h3 class="glow">Asyraf.RF</h3>
+        <div>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+            <a href="other\index.html">Other</a>
+        </div>
+    </nav>
 
-<section class="hero">
-    <h1 class="glow">Hi, I'm <span style="color: var(--neon)">Asyraf Rais Fadhil</span></h1>
-    <p>Web Developer | UI Designer | Tech Enthusiast</p>
-    <a href="more\index.html">
-        <button class="btn">Explore More</button>
-    </a>
-</section>
+    <section class="hero">
+        <h1 class="glow">Hi, I'm <span style="color: var(--neon)">Asyraf Rais Fadhil</span></h1>
+        <p>Web Developer | UI Designer | Tech Enthusiast</p>
+        <a href="more\index.html">
+            <button class="btn">Explore More</button>
+        </a>
+    </section>
 
-<section id="about" class="fade">
-    <h2 class="glow">About Me</h2>
-    <div class="card">
-        <p>
-            <strong>Web Developer</strong> with a passion for building high-performance, modern, and futuristic digital experiences. I don't just build websites; I create immersive environments by experimenting with <strong>dynamic animations, neon aesthetics, and highly interactive UIs</strong>.
-        </p>
-        <p>
-            Currently pursuing my Bachelor’s degree in <strong>Software Engineering (D4 TRPL)</strong> at <strong>Politeknik Negeri Batam (2024-2028)</strong>, I spend my time at the intersection of logic and art. My technical curiosity drives me to dive deep into <strong>Full-Stack Development</strong> using the latest tech stacks and exploring the world of <strong>Game Development</strong>.
-        </p>
-        <p>
-            Outside of the terminal, I am a creator at heart. Whether it’s illustrating <strong>Digital Art</strong> or weaving narratives through <strong>Storywriting</strong>, I bring a storyteller’s perspective to every line of code I write.
-        </p>
-    </div>
-</section>
+    <section id="about" class="fade">
+        <h2 class="glow">About Me</h2>
+        <div class="card">
+            <p>
+                <strong>Web Developer</strong> with a passion for building high-performance, modern, and futuristic
+                digital experiences. I don't just build websites; I create immersive environments by experimenting with
+                <strong>dynamic animations, neon aesthetics, and highly interactive UIs</strong>.
+            </p>
+            <p>
+                Currently pursuing my Bachelor’s degree in <strong>Software Engineering (D4 TRPL)</strong> at
+                <strong>Politeknik Negeri Batam (2024-2028)</strong>, I spend my time at the intersection of logic and
+                art. My technical curiosity drives me to dive deep into <strong>Full-Stack Development</strong> using
+                the latest tech stacks and exploring the world of <strong>Game Development</strong>.
+            </p>
+            <p>
+                Outside of the terminal, I am a creator at heart. Whether it’s illustrating <strong>Digital Art</strong>
+                or weaving narratives through <strong>Storywriting</strong>, I bring a storyteller’s perspective to
+                every line of code I write.
+            </p>
+        </div>
+    </section>
 
-<section id="skills" class="fade">
-    <h2 class="glow">Skills</h2>
+    <section id="skills" class="fade">
+        <h2 class="glow">Skills</h2>
 
-    <div class="skill">
-        <p>HTML</p>
-        <div class="bar"><span data-width="95%"></span></div>
-    </div>
+        <div class="skill">
+            <p>HTML</p>
+            <div class="bar"><span data-width="95%"></span></div>
+        </div>
 
-    <div class="skill">
-        <p>CSS</p>
-        <div class="bar"><span data-width="90%"></span></div>
-    </div>
+        <div class="skill">
+            <p>CSS</p>
+            <div class="bar"><span data-width="90%"></span></div>
+        </div>
 
-    <div class="skill">
-        <p>JavaScript</p>
-        <div class="bar"><span data-width="85%"></span></div>
-    </div>
-</section>
+        <div class="skill">
+            <p>JavaScript</p>
+            <div class="bar"><span data-width="85%"></span></div>
+        </div>
+    </section>
 
-<section id="contact" class="fade">
-    <h2 class="glow">Contact</h2>
-    <div class="card">
-        <p>Email: <a href="mailto:asrafrf@gmail.com">asrafrf@gmail.com</a></p>
-        <p>Instagram: <a href="https://instagram.com/asyrfrf" target="_blank">@asyrfrf</a></p>
-        <p>GitHub: <a href="https://github.com/AsyrafRF" target="_blank">github.com/AsyrafRF</a></p>
-    </div>
-</section>
+    <section id="contact" class="fade">
+        <h2 class="glow">Contact</h2>
+        <div class="card">
+            <p>Email: <a href="mailto:asrafrf@gmail.com">asrafrf@gmail.com</a></p>
+            <p>Instagram: <a href="https://instagram.com/asyrfrf" target="_blank">@asyrfrf</a></p>
+            <p>GitHub: <a href="https://github.com/AsyrafRF" target="_blank">github.com/AsyrafRF</a></p>
+        </div>
+    </section>
 
-<footer>
-    © 2026 | Asyraf.RF
-</footer>
+    <footer>
+        © 2026 | Asyraf.RF
+    </footer>
 
-<script>
-    // Scroll Animation
-    const fades = document.querySelectorAll('.fade');
+    <script>
+        // Scroll Animation
+        const fades = document.querySelectorAll('.fade');
 
-    window.addEventListener('scroll', () => {
-        fades.forEach(fade => {
-            const pos = fade.getBoundingClientRect().top;
-            if (pos < window.innerHeight - 100) {
-                fade.classList.add('show');
-            }
+        window.addEventListener('scroll', () => {
+            fades.forEach(fade => {
+                const pos = fade.getBoundingClientRect().top;
+                if (pos < window.innerHeight - 100) {
+                    fade.classList.add('show');
+                }
+            });
         });
-    });
 
-    // Skill Bar Animation
-    const bars = document.querySelectorAll('.bar span');
+        // Skill Bar Animation
+        const bars = document.querySelectorAll('.bar span');
 
-    bars.forEach(bar => {
-        setTimeout(() => {
-            bar.style.width = bar.dataset.width;
-        }, 500);
-    });
-</script>
+        bars.forEach(bar => {
+            setTimeout(() => {
+                bar.style.width = bar.dataset.width;
+            }, 500);
+        });
+    </script>
 
 </body>
+
 </html>
