@@ -10,7 +10,7 @@ Di Proyek ini saya sebagai Team Leader beranggotakan 4 orang juga memegang role 
 - https://polibatam.id/si-pcm-batam
 
 ## Proyek 3: RambuID - Team Leader/Backend Developer
-Di Proyek ini saya sebagai Team Leader beranggotakan 6 Orang juga memegang role backend developer pada pengembangan Aplikasi Mobile Pintar berbasis IOT yang dirancang untuk membantu pengendara dan masyarakat mengenali dan memahami berbagai jenis rambu jalan raya yang ada di Indonesia. Dengan menggunakan teknologi pengolahan citra dan kecerdasan buatan (AI), aplikasi ini mampu mendeteksi dan mengidentifikasi rambu-rambu lalu lintas secara real-time dari gambar, video, atau live camera. Dikembangkan Selama 1 Semester dengan tech architecture: IoT Device (Raspberry Pi 4 + camera & TTS GPS Accelerator sensors) -> Mobile monitoring App (Mobile Flutter & WebSocket FastAPI).
+Di Proyek ini saya sebagai Team Leader beranggotakan 6 Orang juga memegang role backend developer pada pengembangan Aplikasi Mobile Pintar berbasis IOT yang dirancang untuk membantu pengendara dan masyarakat mengenali dan memahami berbagai jenis rambu jalan raya yang ada di Indonesia. Dengan menggunakan teknologi pengolahan citra dan kecerdasan buatan (AI), aplikasi ini mampu mendeteksi dan mengidentifikasi rambu-rambu lalu lintas secara real-time dari gambar, video, atau live camera. Dikembangkan Selama 1 Semester dengan tech architecture: IoT Device (Raspberry Pi 4 + Ultralytics YOLOv5 & OpenCV + camera & TTS GPS Accelerator sensors) -> Mobile monitoring App (Mobile Flutter & WebSocket FastAPI).
 ### Portofolio:
 - https://polibatam.id/rambuid
 
